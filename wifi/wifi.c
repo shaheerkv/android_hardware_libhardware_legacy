@@ -235,6 +235,26 @@ const char *get_dhcp_error_string() {
     return dhcp_lasterror();
 }
 
+#ifdef PRESTO_WIFI
+int wifi_get_state() {
+    int ret = 0;
+    return ret;
+    ALOGI("GET_STATE");
+}
+
+int wifi_load_mfg_driver() {
+    int ret = 0;
+    return ret;
+    ALOGI("LOAD_MFG");
+}
+
+int wifi_unload_mfg_driver() {
+    int ret = 0;
+    return ret;
+    ALOGI("UNLOAD_MFG");
+}
+#endif
+
 int is_wifi_driver_loaded() {
     char driver_status[PROPERTY_VALUE_MAX];
 #ifdef WIFI_DRIVER_MODULE_PATH
